@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+
+.title {
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: rgba(0, 118, 255, .9);
+  font-weight: bold;
+}
+
+.container {
+  border: 1px solid #fff;
+  width: 20rem;
+  height: 30rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  h1 {
+    margin-top: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+}
+
+.rad-label {
+  margin-left: auto;
+  margin-right: auto;
+  width: 13rem;
+  background-color: rgb(243, 243, 243);
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 14px 16px;
+  margin: 10px 0;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: rgba(0, 118, 255, 0.9);
+}
+
+.rad-input {
+  margin-top: 4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+
+  background: linear-gradient(to right bottom, hsl(59, 71%, 73%), hsl(69, 74%, 72%));
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  text-align: center;
+  font-family: 'Gowun Dodum', sans-serif;
+  color: rgb(37, 36, 36);
+  margin-left: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  transition: .3s;
+}
+
+.rad-input:checked~.rad-text {
+  color: rgb(255, 255, 255);
+}
+
+.btn {
+  margin-top: 5rem;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 24px;
+  width: 6rem;
+	border-style: none;
+	box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+	box-sizing: border-box;
+	color: #000;
+	cursor: pointer;
+	display: inline-flex;
+	fill: currentcolor;
+	font-size: 17px;
+  font-family: 'Rajdhani', sans-serif;
+	font-weight: 500;
+	height: 48px;
+	justify-content: center;
+	letter-spacing: .25px;
+	max-width: 100%;
+	text-align: center;
+	z-index: 0;
+  transition: .3s;
+	&:hover {
+		background: rgba(152, 188, 230, 0.9);
+    color: #fff;
+	}
+	&:active {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:not(:disabled) {
+		box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+	}
+	&:not(:disabled):hover {
+		box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+	}
+	&:not(:disabled):focus {
+		box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+	}
+	&:not(:disabled):active {
+		box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+	}
+	&:disabled {
+		box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+	}
+}
