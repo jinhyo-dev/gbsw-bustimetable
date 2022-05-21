@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   const router = useRouter()
 
   const changePage = () => {
-    if (!location){
+    if (!location) {
       toast.info('둘 중 하나를 선택해주세요.', {
         position: "top-center",
         autoClose: 2000,
@@ -23,25 +23,25 @@ const Home: NextPage = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        })
+      })
     }
-    else { 
+    else {
       router.push(location)
     }
   }
 
   return (
     <div>
-        <ToastContainer/>
+      <ToastContainer />
       <div className={cs('title')}>
         Bus Timetable
       </div>
       <div className={cs('container')}>
         <h1>Choose one!</h1>
-        <div style={{ marginTop: '5rem'}}>
-          <label className={cs("rad-label")} style={{ width: "16rem", margin: "auto"}}>
+        <div style={{ marginTop: '5rem' }}>
+          <label className={cs("rad-label")} style={{ width: "16rem", margin: "auto" }}>
             <input type="radio" className={cs("rad-input")} name="rad" onChange={(e) => {
-              setLocation('intercity/setDestination')
+              setLocation('intercity/SetDestination')
             }} />
             <div className={cs("rad-design")}></div>
             <div className={cs("rad-text")}>시외버스</div>
@@ -49,13 +49,13 @@ const Home: NextPage = () => {
 
           <label className={cs("rad-label")} style={{ width: "16rem", margin: "auto", marginTop: '1rem' }}>
             <input type="radio" className={cs("rad-input")} name="rad" onChange={(e) => {
-              setLocation('city/setDestination')
+              setLocation('city/SetDestination')
             }} />
             <div className={cs("rad-design")}></div>
             <div className={cs("rad-text")}>농어촌버스</div>
           </label>
         </div>
-        <button className={cs('btn')} onClick={changePage}>CONFIRM</button>
+        <button className={cs('btn')} onClick={changePage}>확인</button>
       </div>
     </div>
   )
