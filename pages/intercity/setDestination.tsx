@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import classNames from 'classnames/bind'
 import styles from '../../styles/intercity/components.module.scss'
 import Depart from '../components/Depart'
@@ -9,11 +9,13 @@ const cs = classNames.bind(styles)
 export default function SetDestination() {
   const [location, setLocation] = useState<number>(0)
 
-  // const alertOnce  = () => {
-  //   alert('도리원에서 출발하는 버스를 타시면 출발, 도착하는 버스를 타시면 도착 버튼을 눌러주세요.')
-  // }
+  const alertOnce = () => {
+    alert('도리원에서 출발하는 버스를 타시면 출발, 도착하는 버스를 타시면 도착 버튼을 눌러주세요.')
+  }
 
-  // alertOnce()
+  useEffect(() => {
+    alertOnce()
+  }, [])
 
   return (
     <div className="container">
@@ -23,11 +25,12 @@ export default function SetDestination() {
       </div>
       {
         location == 1 && (
-          <Depart />
+          <Depart/>
         )
-      }{
+      }
+      {
         location == 2 && (
-          <Arrive />
+          <Arrive/>
         )
       }
     </div>

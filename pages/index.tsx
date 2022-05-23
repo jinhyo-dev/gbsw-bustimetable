@@ -41,7 +41,7 @@ const Home: NextPage = () => {
         <div style={{ marginTop: '5rem' }}>
           <label className={cs("rad-label")} style={{ width: "16rem", margin: "auto" }}>
             <input type="radio" className={cs("rad-input")} name="rad" onChange={(e) => {
-              setLocation('intercity/SetDestination')
+              setLocation('intercity/setDestination')
             }} />
             <div className={cs("rad-design")}></div>
             <div className={cs("rad-text")}>시외버스</div>
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
 
           <label className={cs("rad-label")} style={{ width: "16rem", margin: "auto", marginTop: '1rem' }}>
             <input type="radio" className={cs("rad-input")} name="rad" onChange={(e) => {
-              setLocation('city/SetDestination')
+              setLocation('city/setDestination')
             }} />
             <div className={cs("rad-design")}></div>
             <div className={cs("rad-text")}>농어촌버스</div>

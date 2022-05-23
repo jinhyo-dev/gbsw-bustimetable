@@ -10,7 +10,7 @@ export default function Depart() {
   return (
     <>
       <div className={cs('defaultLocation')}>도리원버스터미널 </div>
-      <div className={cs('arrow')} style={{}}>⇂</div>
+      <div className={cs('arrow', 'greenArrow')} style={{}}>⇂</div>
       <div className="selectBox">
         <select id="select-box1" className="selects" onChange={(e) => { setPos(e.target.value) }}>
           <option value="back">도착지를 선택하세요</option>

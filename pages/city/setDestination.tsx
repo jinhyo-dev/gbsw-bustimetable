@@ -14,7 +14,6 @@ export default function SetDestination() {
   const [arriveLocation, setArriveLocation] = useState<string>('')
 
   const changePage = () => {
-    console.log(startLocation, arriveLocation)
     if (!startLocation || !arriveLocation) {
       toast.error('출발지와 목적지를 확인해주세요.', {
         position: "top-center",
@@ -26,7 +25,6 @@ export default function SetDestination() {
         progress: undefined,
       })
     }
-
     else if (startLocation === arriveLocation) {
       toast.error('출발지와 목적지가 같습니다.', {
         position: "top-center",
@@ -39,7 +37,7 @@ export default function SetDestination() {
       })
     }
     else {
-      router.push('/city/Table?start=' + startLocation + '&arrive=' + arriveLocation)
+      router.push('/city/Table?starting_point=' + startLocation + '&destination=' + arriveLocation)
     }
   }
 
@@ -62,7 +60,7 @@ export default function SetDestination() {
       <div className='container' style={{ marginTop: '3rem' }}>
         <div className={cs('title')}>출발지와 목적지를 <br />선택하세요.</div>
         <Select options={starts} className={cs('select', 'select1')} onChange={(e: any) => { setStartLocation(e.value) }} />
-        <Select options={arrives} className={cs('select', 'select2')} onChange={(e: any) => { setArriveLocation(e.value) }} />
+        <Select options={arrives} className={cs('select', 'select2')} onChange={(e: any) => { setArriveLocation(e.value)}} />
         <button onClick={changePage} className='btn'>확인</button>
       </div>
       <ToastContainer />
