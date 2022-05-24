@@ -5,6 +5,8 @@ import styles from '../styles/index.module.scss'
 import classNames from "classnames/bind"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Head from './components/Head'
+import {Headers} from "next/dist/server/web/spec-compliant/headers";
 
 const cs = classNames.bind(styles)
 
@@ -32,6 +34,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
+      <Head title={'GBSW | Bus TimeTable'}/>
       <ToastContainer />
       <div className={cs('container')}>
         <div className='title'>Bus TimeTable</div>
