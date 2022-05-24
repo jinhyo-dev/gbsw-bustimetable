@@ -20,13 +20,6 @@ const FancyModal = () => {
 
   console.log(isOpen)
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.addEventListener("click", () => {
-        setIsOpen(false)
-      });
-    }
-  })
 
   const toggleModal = () => {
     setIsOpen(!isOpen)
@@ -37,22 +30,24 @@ const FancyModal = () => {
     <div>
       <button onClick={toggleModal}>운행정보</button>
       <Modal isOpen={isOpen} className={cs('modal')}>
-        <table className={cs('table')}>
-          <thead style={{textAlign: 'center'}}>
-          <tr>
-            <th>시간</th>
-            <th>번호</th>
-          </tr>
-          </thead>
-          <tbody>
-          {Object.values(data.AllTable).map((log: any) => (
-            <tr key={1}>
-              <td>{log.time}</td>
-              <td>{log.bus_num}</td>
+        <div onClick={toggleModal} className={cs('overlay')}>
+          <table className={cs('table')}>
+            <thead style={{textAlign: 'center'}}>
+            <tr>
+              <th>시간</th>
+              <th>번호</th>
             </tr>
-          ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+            {Object.values(data.AllTable).map((log: any) => (
+              <tr key={1}>
+                <td className={cs('time')}>{log.time}</td>
+                <td className={cs('number')}>{log.bus_num}</td>
+              </tr>
+            ))}
+            </tbody>
+          </table>
+        </div>
       </Modal>
     </div>
   )

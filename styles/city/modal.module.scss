@@ -11,7 +11,9 @@
     padding: 8px;
   }
   tr:nth-child(even){background-color: #f2f2f2;}
-  tr:hover {background-color: #ddd;}
+  tr:hover {
+    background-color: #ddd;
+  }
   th {
     text-align: center;
     padding-top: 12px;
@@ -21,9 +23,18 @@
   }
 }
 
+.overlay {
+  width: 100vw;
+  height: 100vh;
+}
+
 .modalCloseBtn {
   cursor: pointer;
   background-color: #fff;
   border: #fff;
   font-size: 1.3rem;
+}
+
+.number {
+  color: #e74c3c;
 }

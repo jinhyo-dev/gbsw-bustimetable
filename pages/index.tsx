@@ -33,10 +33,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <ToastContainer />
-      <div className={cs('title')}>
-        Bus Timetable
-      </div>
       <div className={cs('container')}>
+        <div className='title'>Bus TimeTable</div>
         <h1>Choose one!</h1>
         <div style={{ marginTop: '5rem' }}>
           <label className={cs("rad-label")} style={{ width: "16rem", margin: "auto" }}>
