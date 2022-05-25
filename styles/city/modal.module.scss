@@ -38,3 +38,19 @@
 .number {
   color: #e74c3c;
 }
+
+.information {
+  width: 5rem;
+  height: 2rem;
+  margin-top: 3rem;
+  background-color: #006a2c;
+  border : 1px solid #006a2c;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.3s;
+  &:hover {
+    background-color: #069742;
+    cursor: pointer;
+  }
+  margin-bottom: 2rem;
+}

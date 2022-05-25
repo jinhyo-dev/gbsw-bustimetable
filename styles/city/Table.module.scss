@@ -27,6 +27,9 @@
 .mainBtn {
   text-decoration: none;
   color: rgba(0, 118, 255, 0.9);
+  &:hover {
+    color: rebeccapurple;
+  }
 }
 
 .mainTable{
@@ -34,9 +37,9 @@
   margin-right: auto;
   z-index: 2;
   width: 19rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-collapse: collapse;
   border-spacing: 0;
-  box-shadow: 0 2px 15px rgba(64,64,64,.7);
   border-radius: 12px 12px 0 0;
   overflow: hidden;
   margin-bottom: 3rem;
@@ -47,11 +50,12 @@
     text-align: center;
   }
   th{
-    background-color: #ECE6CC;
-    color: #505050;
+    background-color: rgba(0, 118, 255, 0.9);
+    opacity: 0.5;
+    height: 15px;
+    color: #000;
     font-family: 'Open Sans',Sans-serif;
     font-weight: 300;
-    text-transform: uppercase;
   }
   tr{
     font-family: 'Gowun Dodum', sans-serif;
@@ -71,7 +75,6 @@
 
 .currentTime {
   margin-top: 2rem;
-
 }
 
 .time {
@@ -92,3 +95,4 @@
   font-size: 18px;
   color: #4eba62;
 }
+

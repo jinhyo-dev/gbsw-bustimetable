@@ -28,7 +28,7 @@ const FancyModal = () => {
 
   return (
     <div>
-      <button onClick={toggleModal}>운행정보</button>
+      <button onClick={toggleModal} className={cs('information')}>운행정보</button>
       <Modal isOpen={isOpen} className={cs('modal')}>
         <div onClick={toggleModal} className={cs('overlay')}>
           <table className={cs('table')}>

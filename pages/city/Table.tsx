@@ -76,7 +76,6 @@ export default function Table() {
           <div className='title'>Bus Timetable</div>
           <div className={cs('routerQuery')}>{router.query.starting_point} <span
             className={cs('arrowIcon')}>➦</span> {router.query.destination}</div>
-          <div className={cs('currentTime')}>현재 시간 : {timeString}</div>
           <table className={cs('mainTable')}>
             <thead>
             <tr>
@@ -96,6 +95,7 @@ export default function Table() {
             </tbody>
           </table>
           <FancyModal/>
+          <p>Go to <a href={'/'} className={cs('mainBtn')}>Main?</a></p>
         </div>
       )
     }
