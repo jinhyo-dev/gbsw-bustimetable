@@ -25,7 +25,7 @@ export default function Arrive() {
     }
   }
   const [pos, setPos] = useState<string>('')
-  console.log(pos)
+
   return (
     <>
       <div className="selectBox" style={{marginTop: '2.5rem'}}>

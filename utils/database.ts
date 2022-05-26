@@ -3,9 +3,9 @@ import knex from 'knex'
 export const db = knex({
   client: 'mysql',
   connection: {
-    host: '158.247.211.247',
+    host: 'localhost',
     port: 3306,
     user: 'jinhyo',
-    database: 'Bus_TimeTable',
+    database: 'BusTimeTable',
   }
 })

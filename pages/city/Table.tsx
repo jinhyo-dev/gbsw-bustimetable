@@ -3,8 +3,9 @@ import {useRouter} from 'next/router'
 import useSWR from 'swr'
 import fetcher from '../../utils/fetcher'
 import FancyModal from "../components/FancyModal"
-import styles from '../../styles/city/Table.module.scss'
+import styles from '../../styles/Table.module.scss'
 import classNames from 'classnames/bind'
+import Load from '../components/Load'
 
 const cs = classNames.bind(styles)
 
@@ -19,8 +20,6 @@ export default function Table() {
     data,
     error
   } = useSWR(`../api/cityBusTable?start=${router.query.starting_point}&destination=${router.query.destination}`, fetcher)
-
-  console.log(data)
 
   const getRemainTime = (currentTime: string, busTime: string) => {
     let currentTimeArray = currentTime.split(' ')
@@ -54,13 +53,7 @@ export default function Table() {
   }
 
   if (!data) {
-    return (
-      <>
-        <div className="ring">Loading
-          <span></span>
-        </div>
-      </>
-    )
+    return <Load/>
   } else {
     if (data.table.length === 0) {
       return (

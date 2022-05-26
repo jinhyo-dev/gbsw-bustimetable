@@ -50,14 +50,14 @@
     text-align: center;
   }
   th{
-    background-color: rgba(0, 118, 255, 0.9);
-    opacity: 0.5;
+    background-color: rgba(82, 151, 234, 0.9);
     height: 15px;
-    color: #000;
+    color: #FFFFF0;
     font-family: 'Open Sans',Sans-serif;
-    font-weight: 300;
+    font-weight: 600;
   }
   tr{
+    font-weight: 600;
     font-family: 'Gowun Dodum', sans-serif;
     width: 100%;
     background-color: #fff;
@@ -65,6 +65,7 @@
 }
 
 .routerQuery {
+  text-align: center;
   font-family: 'Donoun-Medium';
   margin-top: 1rem;
   font-size: 2rem;
@@ -96,3 +97,19 @@
   color: #4eba62;
 }
 
+.startTime {
+  color: #fd7f4f;
+}
+
+.arrivalTime {
+  color: #fd7f4f;
+}
+
+.price {
+  font-weight: bold;
+  color: #118C4F;
+}
+
+.usingTime {
+  color: #bf94e4;
+}

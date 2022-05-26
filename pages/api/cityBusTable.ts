@@ -7,6 +7,5 @@ export default async function CityBusTable(req: NextApiRequest, res: NextApiResp
   const sql2 = `SELECT * FROM cityBusTable WHERE starting_point LIKE '${start}' AND destination LIKE '%${destination}%' ORDER BY time asc`
   const table = await db.raw(sql)
   const AllTable = await db.raw(sql2)
-  console.log(AllTable[0])
   return res.send({Success: true, table: table[0], AllTable: AllTable[0]})
 }

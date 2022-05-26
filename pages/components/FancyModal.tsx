@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Modal from 'react-modal';
 import {useRouter} from 'next/router'
 import useSWR from "swr";
@@ -18,13 +18,9 @@ const FancyModal = () => {
     error
   } = useSWR(`../api/cityBusTable?start=${router.query.starting_point}&destination=${router.query.destination}`, fetcher)
 
-  console.log(isOpen)
-
-
   const toggleModal = () => {
     setIsOpen(!isOpen)
   }
-  console.log(data.AllTable)
 
   return (
     <div>
