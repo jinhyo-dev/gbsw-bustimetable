@@ -3,7 +3,6 @@ import classNames from 'classnames/bind'
 import styles from '../../styles/intercity/components.module.scss'
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {router} from "next/client";
 import {useRouter} from "next/router";
 
 const cs = classNames.bind(styles)
@@ -22,9 +21,8 @@ export default function Arrive() {
         progress: undefined,
       })
     } else {
-      router.push('/intercity/Table?start=도리원&arrive=' + pos)
+      router.push(`/intercity/Table?starting_point=${pos}&destination=도리원`)
     }
-
   }
   const [pos, setPos] = useState<string>('')
   console.log(pos)

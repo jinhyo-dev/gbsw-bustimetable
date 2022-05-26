@@ -20,6 +20,8 @@ export default function Table() {
     error
   } = useSWR(`../api/cityBusTable?start=${router.query.starting_point}&destination=${router.query.destination}`, fetcher)
 
+  console.log(data)
+
   const getRemainTime = (currentTime: string, busTime: string) => {
     let currentTimeArray = currentTime.split(' ')
     let busTimeArray = busTime.split(':')
@@ -63,6 +65,7 @@ export default function Table() {
     if (data.table.length === 0) {
       return (
         <div className='container'>
+          <div className='title'>Bus Timetable</div>
           <div className={cs('routerQuery')}>{router.query.starting_point} <span
             className={cs('arrowIcon')}>➦</span> {router.query.destination}</div>
           <div className={cs('notExist')}><span className={cs('infoIcon')}>ⓘ</span> 다음 버스가 없습니다.</div>
