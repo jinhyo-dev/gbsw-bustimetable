@@ -25,13 +25,13 @@ const Table = () => {
         <div className='title'>Bus Timetable</div>
         <div className={cs('routerQuery')}>{router.query.starting_point} <span
           className={cs('arrowIcon')}>➦</span> {router.query.destination}</div>
-        <table className={cs('mainTable')} style={{ width: '80%', marginTop: '2rem'}}>
+        <table className={cs('mainTable')} style={{ width: '100%', marginTop: '2rem', maxWidth: '70rem' }}>
           <thead>
-          <tr>
+          <tr className={cs('table_tr')}>
             <th>출발시간</th>
             <th>도착시간</th>
             <th>요금</th>
-            <th>소요시간</th>
+            <th className={cs('usingTimeTh')}>소요시간</th>
           </tr>
           </thead>
           <tbody>
