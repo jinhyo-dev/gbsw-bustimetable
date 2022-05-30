@@ -1,6 +1,6 @@
-import { db } from '../../utils/database'
+import { createDBConnection } from '../../utils/database'
 import { NextApiRequest, NextApiResponse } from 'next'
-
+const db = createDBConnection()
 export default async function CityBusTable(req: NextApiRequest, res: NextApiResponse)  {
   const { start, destination } = req.query
   const sql = `SELECT * FROM cityBusTable WHERE starting_point LIKE '${start}' AND destination LIKE '%${destination}%' AND time > curtime() ORDER BY time asc, ABS(time-curtime()) LIMIT 1`
